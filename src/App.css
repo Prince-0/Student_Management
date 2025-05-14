@@ -1,0 +1,276 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align at the top */
+  height: 100vh;
+  padding: 0 10px;
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align at the top */
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  gap: 20px; /* Space between the sections */
+}
+
+.left-side {
+  width: 75%;  /* Left section takes more space */
+  padding: 20px;
+  background-color: transparent;  /* No background color */
+  box-shadow: none;  /* No box-shadow */
+  border-radius: 0;  /* Remove border radius */
+  height: 100%;  /* Take full available height */
+  flex: 1; /* Reduce from flex: 2 */
+  padding-right: 10px;
+}
+
+.right-side {
+  margin-top: 20px;
+  width: 25%; /* Right section takes smaller space */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  flex: 1.2;
+}
+.main-container {
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Flex container for main sections */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+/* Left and right sections */
+.left-section {
+  flex: 2;
+  min-width: 60%;
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+h1 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  width: 100%;
+  margin: 10px 0;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+
+.add-button {
+  background-color: #008CBA;
+}
+
+.add-button:hover {
+  background-color: #007B9F;
+}
+
+p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.filter-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.student-list {
+  margin-top: 20px;
+}
+
+.student-item {
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin: 5px 0;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-item span {
+  font-size: 1rem;
+  color: #333;
+}
+
+.student-item button {
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 1rem;
+  color: white;
+}
+
+.student-item button:hover {
+  background-color: darkred;
+}
+
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.student-item {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/*.student-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}*/
+
+.student-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.student-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.student-email {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.student-course {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.student-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-item button {
+  background-color: #e74c3c;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.student-item button:hover {
+  background-color: #c0392b;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Stack sections vertically on smaller screens */
+    width: 100%;
+    gap: 0;
+  }
+
+  .left-side, .right-side {
+    width: 100%; /* Both sections take full width */
+    margin-bottom: 20px;
+  }
+
+  .right-side {
+    order: -1; /* Place the login section at the top for mobile devices */
+  }
+  
+  .add-button {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .filter-input, .add-button, button {
+    font-size: 0.9rem;
+  }
+}
